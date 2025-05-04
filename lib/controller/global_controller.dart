@@ -22,7 +22,6 @@ class GlobalController extends GetxController {
     if (_isloading.isTrue) {
       getLocation();
     }
-
     super.onInit();
   }
 

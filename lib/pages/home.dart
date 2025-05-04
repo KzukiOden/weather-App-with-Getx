@@ -24,18 +24,20 @@ class _HomeState extends State<Home> {
           () =>
               globalController.checkLoading().isTrue
                   ? Center(child: CircularProgressIndicator())
-                  : ListView(
-                    scrollDirection: Axis.vertical,
-                    children: [
-                      HeaderWidget(),
-                      // display our current temperature
-                      CurrentWeatherWidget(
-                        currentWeatherData:
-                            globalController
-                                .getWeatherData()
-                                .getCurrentWeather(),
-                      ),
-                    ],
+                  : Center(
+                    child: ListView(
+                      scrollDirection: Axis.vertical,
+                      children: [
+                        HeaderWidget(),
+                        // display our current temperature
+                        CurrentWeatherWidget(
+                          currentWeatherData:
+                              globalController
+                                  .getWeatherData()
+                                  .getCurrentWeather(),
+                        ),
+                      ],
+                    ),
                   ),
         ),
       ),

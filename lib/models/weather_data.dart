@@ -9,5 +9,4 @@ class WeatherData {
   CurrentWeatherData getCurrentWeather(){
     return current!;
   }
-  
 }
